@@ -1,0 +1,13 @@
+{% extends 'gestion/base.html' %}
+{% block title %}Entidad{% endblock %}
+{% block content %}
+    {% for entidad in entidades %}
+    <div class="entidad">
+        <h2><a href="{% url 'entidad_detail' pk=entidad.pk %}">{{ entidad.razonSocial }}</a></h2>
+        <div>
+            <p> RUC: {{ entidad.ruc }}</p>
+            <p> CORREO: {{ entidad.correo|linebreaksbr }}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

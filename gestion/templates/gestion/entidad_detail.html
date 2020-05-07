@@ -1,0 +1,15 @@
+{% extends 'gestion/base.html' %}
+{% block title %}Entidad Detalle{% endblock %}
+{% block content %}
+    <div class="entidad">
+        {% if entidad.razonSocial %}
+            <div>
+            {{ entidad.razonSocial }}
+            </div>
+        {% endif %}
+        <div>
+            <p> RUC: {{ entidad.ruc }}</p>
+            <p> CORREO: {{ entidad.correo|linebreaksbr }}</p>
+        </div>
+    </div>
+{% endblock %}
