@@ -1,0 +1,9 @@
+{% extends 'gestion/base.html' %}
+{% block title %}Entidad{% endblock %}
+{% block content %}
+<form method="POST" class="entidad-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Salvar</button> 
+</form>
+<button><a href="/">cancel</a></button>
+{% endblock %}
